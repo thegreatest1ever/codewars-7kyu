@@ -1,0 +1,11 @@
+function snail(column, day, night) {
+  let current = 0;
+  let counts = 0;
+  while (current <= column) {
+    counts++;
+    current += day;
+    if (current >= column) break;
+    current -= night;
+  }
+  return counts;
+}
