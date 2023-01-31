@@ -1,0 +1,6 @@
+function countPixels(k) {
+  if (k == 1){
+    return 11
+  }
+  return k*8+2
+  }
