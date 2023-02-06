@@ -1,0 +1,52 @@
+function trim(x){
+  return x.map((a,i)=>i==x.length-1 ? 
+                a.map(b=>b.replace(/J|\|/g,'...')) : 
+                a.map(b=>b.replace(/J/g,"|"))
+              );
+}
+
+//
+function trim(x){
+  // snip snip
+  var beard = x.map(line => line.map(hair => hair == 'J' ? '|' : hair));
+  
+  // bzzzzz
+  beard.pop();
+  
+  // ointment, YEOOOWCH!! bandaid
+  beard.push((new Array(x[0].length)).fill('...'));
+  
+  // OH YAAAAAA!!!!
+  return beard;
+}
+//
+const trim = (x, last = x.length-1) => x.map( (row,i) => row.map( hair => i==last? "..." : hair=="J" ? "|" : hair ) );
+
+//
+function trim(x){
+
+let first=x[0].map(n=> (n.replace(/J/,"|")))
+ 
+let second=x[1].map(n=> (n.replace(/J/,"|")))
+ 
+let third=x[2].map(n=>n=="J" ? n.replace(/J/,"...") : n.replace(/\|/,'...'))
+                  
+
+  return [first,second,third]
+
+}
+
+//
+function trim(x){
+  return x.map((item, index) => {
+    if(index === 0){
+      return item.map(index => index === 'J' ? "|" : index)
+    }
+    if(index === 1){
+      return item.map(index=> index === 'J' ? "|" : index)
+    }
+    if(index === 2){
+      return item.map(index => index != '...'? '...': '...')
+    }
+  })
+}
