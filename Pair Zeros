@@ -1,0 +1,29 @@
+function pairZeros(arr) {
+  var seenZero = 0;
+  return arr.filter(function(num){
+    return num != 0 || seenZero++ % 2 == 0;
+  });
+}
+
+/*
+function pairZeros(arr) {
+  let zero=0;
+  return arr.map(v=>{
+  if (v===0){
+    {zero++};
+  if (v===0&&zero%2===0)
+    return v=null}
+  return v
+  }).filter(v=>v!==null)
+}
+*/
+
+/*
+var pairZeros = arr => 
+  arr
+    .join('')
+    .replace(/0([^0]*)0/g, '0$1')
+    .split('')
+    .map(Number)
+    
+   */
