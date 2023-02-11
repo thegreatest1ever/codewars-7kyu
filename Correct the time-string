@@ -1,0 +1,33 @@
+function timeCorrect(str) {
+	  const date = new Date(); 
+  if (str == '') return str;
+	  if (!/^\d{2}\:\d{2}\:\d{2}$/g.test(str)) return null;
+  date.setUTCHours(...str.split(':'));
+  return date.toLocaleTimeString('en', {hour12: false});
+}
+
+/*
+function timeCorrect(ts) {
+  if (!ts) return ts
+  if (!/\d\d:\d\d:\d\d/.test(ts)) return null
+  var rs=(ts.slice(0,2)*3600)+(ts.slice(3,5)*60)+(+ts.slice(-2))
+  return `${("0"+~~(rs/3600)%24).slice(-2)}:${("0"+~~(rs%3600/60)).slice(-2)}:${("0"+rs%3600%60).slice(-2)}`
+  
+}
+*/
+
+/*
+function timeCorrect(timeString) {
+  if (timeString === '')
+    return '';
+  let h, m, s;
+  try {
+    [, h, m, s] = timeString.match(/^(\d\d):(\d\d):(\d\d)$/).map(Number);
+  } catch (_) {
+    return null;
+  };
+  let d = new Date(0, 0, 1, h, m, s);
+  return [d.getHours(), d.getMinutes(), d.getSeconds()]
+    .map(s => `0${s}`.slice(-2)).join(':');
+}
+*/
