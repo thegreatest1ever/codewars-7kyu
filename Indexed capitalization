@@ -1,0 +1,42 @@
+function capitalize(s,arr){
+  
+var capS = s.split("");
+
+for(var i = 0; i < arr.length; i++) {
+  if(capS[arr[i]]) {
+    capS[arr[i]] = capS[arr[i]].toUpperCase();
+  }
+}
+
+capS = capS.join("");
+return capS
+};
+/*
+function capitalize(s,arr){
+  return [...s].map((x,i)=>arr.includes(i)?x.toUpperCase():x).join('')
+};
+*/
+/*
+let capitalize = (s, a) => s.split``.map((c, i) => a.includes(i) ? c.toUpperCase() : c).join``;
+*/
+/*
+function capitalize(s,arr){
+  //create an empty var to return a string 
+  //split the string with s.split()
+  var letters = s.split("");
+  //iterate the newly formed array
+  for(var i = 0; i < letters.length; i++) {
+    for(var j = 0; j < arr.length; j++) {
+        if(i === arr[j]) {
+          letters[i] = letters[i].toUpperCase();
+        }  
+    }
+  }
+    return letters.join("")
+    //iterate passed array
+    //if letter[i] === arr[i]
+    //  lettes[i].toUpperCase()
+    // letters.join()
+    //return str
+};
+*/
