@@ -1,0 +1,19 @@
+String.prototype.vowel = function() {
+  return this.match(/[aeiou]/gi) && this.length <= 1 ? true : false;
+};
+/*
+String.prototype.vowel = function() {
+  return /^[aeiouAEIOU]$/.test(this);
+};
+*/
+/*
+String.prototype.vowel = function() {
+let a = this.toLowerCase()
+let vowels = ["a", "e", "i", "o", "u"]
+if(vowels.includes(a)){
+  return true
+} else {
+  return false;
+  }
+};
+*/
