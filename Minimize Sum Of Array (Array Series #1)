@@ -1,0 +1,15 @@
+function minSum(arr) {
+  return arr.sort( (a,b) => a-b )
+            .slice(0, arr.length/2)
+            .reduce( (acc,curr,index) => acc += curr * arr[ arr.length - index - 1 ], 0 )
+}
+/*
+function minSum(arr) {
+ const sorted=arr.sort((a,b)=>a-b)
+ let sum=0;
+ for (let i=0;i<arr.length/2;i++){
+ sum+=sorted[i]*sorted[sorted.length-1-i]
+ }
+ return sum
+}
+*/
