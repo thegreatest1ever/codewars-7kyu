@@ -1,0 +1,17 @@
+function divCon(x){
+  let integers = 0;
+  let strings = 0;
+  for(let i=0; i<x.length; i++){
+    if(typeof x[i] === 'number'){
+      integers+=x[i];
+    }else{
+      strings+=x[i]*1;
+    }
+  }
+  return integers - strings;
+}
+/*
+function divCon(x){
+  return x.reduce((acc, cur) => typeof cur === 'number'? acc + cur : acc - Number(cur),0)
+}
+*/
