@@ -1,0 +1,43 @@
+function mispelled(word1, word2) {
+  if (word1 === word2) {
+    return true; // words are the same, not misspelled
+  }
+
+  if (Math.abs(word1.length - word2.length) > 1) {
+    return false; // words differ by more than 1 character, misspelled
+  }
+
+  if (word1.length > word2.length) {
+    return isOneCharOff(word1, word2);
+  } else {
+    return isOneCharOff(word2, word1);
+  }
+}
+
+function isOneCharOff(longerWord, shorterWord) {
+  let diffCount = 0;
+  let i = 0;
+  let j = 0;
+
+  while (i < longerWord.length && j < shorterWord.length) {
+    if (longerWord[i] !== shorterWord[j]) {
+      diffCount++;
+
+      if (diffCount > 1) {
+        return false; // words differ by more than 1 character, misspelled
+      }
+
+      if (longerWord.length === shorterWord.length) {
+        i++;
+        j++;
+      } else {
+        i++;
+      }
+    } else {
+      i++;
+      j++;
+    }
+  }
+
+  return true; // words differ by at most 1 character, not misspelled
+}
