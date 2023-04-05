@@ -1,0 +1,13 @@
+function sortList(sortBy, list) {
+  list.sort(function(a, b) {
+    if (a[sortBy] < b[sortBy]) {
+      return 1;
+    }
+  });
+  return list;
+}
+/*
+function sortList (sortBy, list) {
+  return list.sort((a,b)=>b[sortBy]-a[sortBy])
+}
+*/
