@@ -1,0 +1,11 @@
+function sumFactorial(arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    let factorial = 1;
+    for (let j = 2; j <= arr[i]; j++) {
+      factorial *= j;
+    }
+    sum += factorial;
+  }
+  return sum;
+}
