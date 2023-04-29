@@ -1,0 +1,17 @@
+function secondSymbol(s, symbol) {
+  let firstIndex = s.indexOf(symbol);
+  
+  // Check if the letter exists in the string
+  if (firstIndex === -1) {
+    return -1;
+  }
+  
+  let secondIndex = s.indexOf(symbol, firstIndex + 1);
+  
+  // Check if the letter occurs only once in the string
+  if (secondIndex === -1) {
+    return -1;
+  }
+  
+  return secondIndex;
+}
