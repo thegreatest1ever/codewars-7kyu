@@ -1,0 +1,16 @@
+function span(sequence, predicate) {
+  let firstSequence = [];
+  let secondSequence = [];
+
+  for (let item of sequence) {
+    if (predicate(item)) {
+      firstSequence.push(item);
+    } else {
+      break;
+    }
+  }
+
+  secondSequence = sequence.slice(firstSequence.length);
+
+  return [firstSequence, secondSequence];
+}
