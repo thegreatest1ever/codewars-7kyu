@@ -1,0 +1,15 @@
+function likeOrDislike(buttonInputs) {
+  let currentState = "Nothing";
+  for (let i = 0; i < buttonInputs.length; i++) {
+    if (buttonInputs[i] === "Like" && currentState === "Dislike") {
+      currentState = "Like";
+    } else if (buttonInputs[i] === "Dislike" && currentState === "Like") {
+      currentState = "Dislike";
+    } else if (buttonInputs[i] === currentState) {
+      currentState = "Nothing";
+    } else {
+      currentState = buttonInputs[i];
+    }
+  }
+  return currentState;
+}
