@@ -1,0 +1,5 @@
+function age(x, y) {
+  // Calculate Julie's age
+  let j = y*x/(y-1);
+  return j;
+}
