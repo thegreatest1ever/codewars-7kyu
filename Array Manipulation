@@ -1,0 +1,19 @@
+function arrayManip(arr) {
+  const n = []; // Result array
+
+  for (let i = 0; i < arr.length; i++) {
+    let leastGreater = Infinity;
+    let found = false; // Flag to indicate if least greater element is found
+
+    for (let j = i + 1; j < arr.length; j++) {
+      if (arr[j] > arr[i] && arr[j] < leastGreater) {
+        leastGreater = arr[j];
+        found = true;
+      }
+    }
+
+    n.push(found ? leastGreater : -1);
+  }
+
+  return n;
+}
