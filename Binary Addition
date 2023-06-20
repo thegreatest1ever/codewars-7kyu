@@ -1,0 +1,10 @@
+function addBinary(a, b) {
+  // Calculate the sum of the two numbers
+  const sum = a + b;
+
+  // Convert the sum to binary
+  const binary = sum.toString(2);
+
+  // Return the binary representation as a string
+  return binary;
+}
