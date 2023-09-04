@@ -1,0 +1,21 @@
+function maxGap(array) {
+  // Convert the array elements to numbers.
+  array = array.map(Number);
+
+  // Sort the array in ascending order.
+  array.sort((a, b) => a - b);
+
+  // Initialize the maximum difference to 0.
+  let maxDifference = 0;
+
+  // Iterate over the sorted array.
+  for (let i = 0; i < array.length - 1; i++) {
+    // Get the difference between the current element and the next element.
+    let difference = array[i + 1] - array[i];
+
+    // Update the maximum difference if necessary.
+    maxDifference = Math.max(maxDifference, difference);
+  }
+
+  return maxDifference;
+}
