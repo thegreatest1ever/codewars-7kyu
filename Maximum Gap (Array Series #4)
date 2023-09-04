@@ -19,3 +19,24 @@ function maxGap(array) {
 
   return maxDifference;
 }
+
+//
+def max_gap(array):
+    # Convert the array elements to numbers.
+    array = list(map(int, array))
+
+    # Sort the array in ascending order.
+    array.sort()
+
+    # Initialize the maximum difference to 0.
+    max_difference = 0
+
+    # Iterate over the sorted array.
+    for i in range(len(array) - 1):
+        # Get the difference between the current element and the next element.
+        difference = array[i + 1] - array[i]
+
+        # Update the maximum difference if necessary.
+        max_difference = max(max_difference, difference)
+
+    return max_difference
